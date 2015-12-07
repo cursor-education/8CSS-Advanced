@@ -133,7 +133,143 @@ inset? &lt;x shift> &lt;y shift> &lt;blur radius> &lt;length> &lt;color>
 </code></pre>
 
             </section>
-       
+
+            <section>
+                <section>
+                    <h2>Gradients</h2>
+                    <img src="images/linear-gradient.png" height="383" width="309">
+                </section>
+                <section>
+<pre><code>linear-gradient( 
+  [ &lt;angle> | to &lt;side-or-corner> ,]? &lt;color-stop> [, &lt;color-stop>]+ )
+  \---------------------------------/ \----------------------------/
+    Definition of the gradient line        List of color stops  
+
+where &lt;side-or-corner> = [left | right] || [top | bottom]
+  and &lt;color-stop>     = &lt;color> [ &lt;percentage> | &lt;length> ]?</code></pre>
+                </section>
+
+                <section>
+<pre><code>linear-gradient( 45deg, blue, red );           /* A gradient on 45deg axis starting blue and finishing red */
+linear-gradient( to left top, blue, red);      /* A gradient going from the bottom right to the top left starting blue and 
+                                                  finishing red */
+
+linear-gradient( 0deg, blue, green 40%, red ); /* A gradient going from the bottom to top, starting blue, being green after 40% 
+                                                  and finishing red */</code></pre>
+                </section>                
+            </section>
+
+            <section>
+                <section>
+                    <h2>Web fonts</h2>
+                    <img src="images/images.png" height="188" width="268">
+                </section>
+                <section>
+
+<pre><code>@font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff2') format('woff2'),
+       url('myfont.woff') format('woff'),
+       url('myfont.ttf') format('truetype');
+}</code></pre>                
+                
+                </section>
+                <section>
+                    <h2>Google fonts</h2>
+<pre><code>@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+</code></pre>                   
+                </section>
+
+                <section>
+                    <h2>Fonts Generator</h2>
+                    <a href="http://www.fontsquirrel.com/">Fontsquirrel</a>
+                </section>
+
+                <section>
+                    <h2>Icons</h2>
+                    <a href="https://icomoon.io/#home">Icomoon</a><br />
+                    <a href="http://fontello.com/">Fontello</a><br />
+                    <a href="https://fortawesome.github.io/Font-Awesome/">Font-Awesome</a><br />
+                    <a href="http://getbootstrap.com/">Bootstrap</a>
+                </section>
+            </section> 
+
+            <section>
+                <h2>Z-Index</h2>
+                <img src="images/zindex.png" height="199" width="205">
+<pre><code>div {
+  z-index: 1; /* integer */
+}}</code></pre>                 
+            </section>
+
+            <section>
+                <h2>Transitions</h2>
+                <img src="images/TransitionsPrinciple.png" height="204" width="706">
+<pre><code>transition: &lt;property> &lt;duration> &lt;timing-function> &lt;delay>;</code></pre>                 
+            </section>
+
+            <section>
+                <section>
+                <h2>CSS3 Transforms</h2>
+<pre><code>transform: &lt;type>;</code></pre>                
+<ul>                
+    <li>translate()</li>
+    <li>rotate()</li>
+    <li>scale()</li>
+    <li>skewX()</li>
+    <li>skewY()</li>
+</ul>                 
+            </section> 
+
+            <section>
+<pre><code>p {
+  border: solid red;
+
+  -webkit-transform: translate(100px) rotate(20deg);
+  -webkit-transform-origin: 0 -250px;
+
+  transform: translate(100px) rotate(20deg);
+  transform-origin: 0 -250px;
+}</code></pre>    
+            </section>
+</section>
+        <section>
+
+            <section>
+                    <h2>Animation</h2>
+<pre><code>/* @keyframes duration | timing-function | delay | 
+   iteration-count | direction | fill-mode | play-state | name */
+
+@keyframes example {
+    from {}
+    to {}
+}
+
+@keyframes example {
+    0%   {}
+    25%  {}
+    50%  {}
+    100% {}
+}</code></pre>                     
+            </section>
+
+            <section>
+<pre><code>/* @keyframes duration | timing-function | delay | 
+   iteration-count | direction | fill-mode | play-state | name */
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+/* @keyframes duration | timing-function | delay | name */
+  animation: 3s linear 1s slidein;
+
+/* @keyframes duration | name */
+  animation: 3s slidein;</code></pre>
+           </section>
+
+         </section>
         </div>
     </div>
 
